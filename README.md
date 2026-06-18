@@ -1,63 +1,159 @@
-# Andleeb Asghar — Portfolio Website
+# Andleeb Asghar — Upwork Portfolio Website
 
-This repository contains the source files for Andleeb Asghar's personal SEO strategist & medical content writer portfolio website.
+This repository contains the source files for Andleeb Asghar’s Upwork-safe portfolio website for SEO strategy, medical content writing, local SEO, healthcare SEO, blog writing, technical SEO, and authority content.
+
+The live portfolio is designed to be shared with potential Upwork clients during proposals or messages while keeping all communication, contracts, milestones, and payments on Upwork.
+
+## Live Website
+
+**Portfolio Website:**
+https://andleebofficial06.github.io/Upwork-Portfolio/
+
+**Upwork Profile:**
+https://www.upwork.com/freelancers/andleeba7
+
+## Purpose of This Website
+
+This website showcases:
+
+* SEO strategy services
+* Medical and healthcare content writing experience
+* Local SEO and Google Business Profile results
+* Case studies and performance metrics
+* Published articles and author profiles
+* Peer-reviewed research background
+* Verified Upwork-style client feedback
+* Service packages and estimated pricing
+* Professional background, credentials, and tools used
+
+The website is intended to help clients quickly review my experience, results, and portfolio before hiring me through Upwork.
 
 ## Files
 
-| File | Purpose |
-|---|---|
-| `index.html` | Main public-facing website (full version — includes Calendly booking, contact form, pricing, etc.) |
-| `profile.png` | Profile photo (background removed), used across the hero and About sections |
-| `upwork-portfolio.html` | Self-contained version of the site to send directly to Upwork clients — no personal contact info, booking links, or off-platform contact methods. All CTAs point to the Upwork profile instead. Images are embedded, so this file works standalone with no other assets needed. |
+| File          | Purpose                                                                           |
+| ------------- | --------------------------------------------------------------------------------- |
+| `index.html`  | Main website file used by GitHub Pages. This contains the full portfolio website. |
+| `profile.png` | Profile image used for the portfolio website.                                     |
+| `README.md`   | Repository documentation explaining the website purpose, setup, and usage.        |
 
-## Setup — `index.html`
+## Upwork-Safe Usage
 
-1. Keep `index.html` and `profile.png` in the **same folder**.
-2. Upload both files to your hosting (e.g. GitHub Pages, Netlify, or any static host).
-3. The site is plain HTML/CSS/JS — no build step required.
+This website is built for use in Upwork proposals and client conversations.
 
-### Contact form (EmailJS)
-The contact form uses [EmailJS](https://emailjs.com) to deliver messages straight to your inbox without a backend server.
+To stay aligned with Upwork’s communication and payment rules:
 
-- **Service ID:** `service_qsuynvk`
-- **Template ID:** `template_mq9unrl`
-- **Public Key:** set in the `emailjs.init("...")` call near the top of `index.html`
+* All call-to-action buttons point to the Upwork profile.
+* The website does not ask clients to pay outside Upwork.
+* The website tells clients to communicate and hire through Upwork.
+* The footer includes an Upwork-only communication and payment disclaimer.
+* Package pricing is shown for guidance only; final scope and payment should be handled through an official Upwork contract.
 
-If you ever need to change where messages are delivered, update the **To Email** field inside your EmailJS template (not in the code) — EmailJS templates control the destination address.
+## Important Compliance Note
 
-Template variables sent from the form:
-```
-from_name, from_email, website, service, message, email
-```
-Make sure these match exactly inside your EmailJS template content and "To Email" field.
+All work, communication, contracts, milestones, and payments should remain on Upwork.
 
-### Booking (Calendly)
-The "Book a Call" buttons open a Calendly popup using:
-```
-https://calendly.com/andleebasghar06/seo-support-discussion
-```
-To change the link, search for `calendly.com` inside `index.html` and replace the URL in both the button `onclick` handlers.
+This website should not be used to direct new Upwork clients to off-platform communication or payment methods.
 
-## Setup — `upwork-portfolio.html`
+Avoid adding the following to the Upwork proposal version of this website:
 
-This file is meant to be sent or shared **as-is** with Upwork clients during proposals or messages. It requires no setup:
+* Personal email address
+* Phone number
+* WhatsApp link
+* Calendly or outside booking links
+* Contact forms
+* Direct payment links
+* Off-platform messaging links
 
-- Fully self-contained — all images are embedded as base64, so there are no external file dependencies.
-- No contact form, no email, no booking links — every call-to-action points to:
-  ```
-  https://www.upwork.com/freelancers/andleeba7
-  ```
-- Includes a footer disclaimer stating all work is conducted exclusively through Upwork.
+## Website Sections
 
-To update it later (e.g. add new testimonials or case studies), edit the testimonial cards inside the `<!-- TESTIMONIALS -->` section, or update the Upwork profile screenshot by replacing the embedded image.
+The website includes the following main sections:
 
-## Customizing
+1. **Hero Section**
+   Introduces Andleeb Asghar as an SEO strategist and medical writer.
 
-- **Colors / fonts:** defined as CSS variables at the top of the `<style>` block (`--ink`, `--gold`, `--teal`, etc.) and the Google Fonts `<link>` tag (currently using **Inter**).
-- **Stats / numbers:** hero stats and result cards use `data-target="600"` style attributes — the counter animation reads this value automatically.
-- **Sections:** each section is wrapped in `<section id="...">` and linked from the nav via `href="#..."` — keep IDs and links in sync if you rename or reorder sections.
+2. **Results**
+   Highlights SEO outcomes such as traffic growth, phone-call increases, AI search visibility, and ranking performance.
 
-## Notes
+3. **Services**
+   Covers local SEO, website copywriting, blog writing, healthcare SEO, e-commerce SEO, and technical SEO strategy.
 
-- This site has no backend — it's static HTML/CSS/JS that runs entirely in the browser.
-- Large file sizes (`index.html` and `upwork-portfolio.html`) come from embedded base64 images. If you want smaller, faster-loading files, you can re-host the images separately (e.g. `profile.png`, `upwork-profile.png`) and reference them with a normal `<img src="...">` path instead.
+4. **Pricing**
+   Shows estimated SEO content packages and add-on services.
+
+5. **Case Studies**
+   Presents client examples and documented SEO results.
+
+6. **Industries**
+   Lists industries served, including healthcare, dental, legal, SaaS, e-commerce, real estate, wellness, and local businesses.
+
+7. **Tools**
+   Shows SEO tools used, including Ahrefs, SEMrush, Google Search Console, SurferSEO, NeuronWriter, Moz Pro, Screaming Frog, and PageSpeed Insights.
+
+8. **Published Work**
+   Displays author profiles, medical content bylines, and peer-reviewed research publications.
+
+9. **About**
+   Summarizes education, credentials, SEO experience, medical background, and Upwork achievements.
+
+10. **Testimonials**
+    Shows selected client feedback and Upwork-style review highlights.
+
+11. **Footer Disclaimer**
+    States that all work and communication are conducted through Upwork.
+
+## Setup Instructions
+
+This website is hosted with GitHub Pages.
+
+To keep it working correctly:
+
+1. Keep `index.html`, `profile.png`, and `README.md` in the main/root folder of the repository.
+2. Make sure the repository is public.
+3. Go to **Settings → Pages**.
+4. Under **Build and deployment**, choose:
+
+   * **Source:** Deploy from a branch
+   * **Branch:** main
+   * **Folder:** / root
+5. Save the settings.
+6. Wait a few minutes for GitHub Pages to deploy the site.
+
+The live website should appear at:
+
+https://andleebofficial06.github.io/Upwork-Portfolio/
+
+## Editing the Website
+
+To update the website:
+
+1. Open `index.html`.
+2. Click the pencil/edit icon.
+3. Make the required changes.
+4. Scroll down and click **Commit changes**.
+5. Wait a few minutes for GitHub Pages to redeploy.
+6. Refresh the live website using `Ctrl + Shift + R`.
+
+## Notes About File Size
+
+The `index.html` file may be large because some images or design assets may be embedded inside the file.
+
+If GitHub says it cannot preview the file because it is too large, this is not an error. The website can still work normally.
+
+To view the full code, click **Raw**.
+
+## Recommended Cover Letter Usage
+
+When sharing this website in an Upwork proposal, use wording like:
+
+> I also created a portfolio page with relevant SEO case studies, client results, and published work examples:
+> https://andleebofficial06.github.io/Upwork-Portfolio/
+>
+> All communication, scope discussion, contracts, milestones, and payment will stay fully on Upwork.
+
+## Professional Disclaimer
+
+The website describes SEO, content writing, and marketing services. Any medical, healthcare, legal, or technical content should be reviewed by the client’s appropriate professional, regulatory, or compliance team before publication.
+
+## Copyright
+
+© 2026 Andleeb Asghar. All rights reserved.
